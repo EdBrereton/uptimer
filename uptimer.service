@@ -1,0 +1,11 @@
+[Unit]
+Description=auto start stream
+After=multi-user.target
+[Service]
+Type=simple
+ExecStart=/home/pi/uptimer/uptimer.sh
+User=pi
+WorkingDirectory=/home/pi/uptimer
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
